@@ -11,7 +11,6 @@ expansiones de nodos con cálculo de costos acumulados.
 """
 
 
-
 # Clase Accion
 class Accion:
     def __init__(self, nombre):
@@ -158,5 +157,3 @@ class Nodo:
         )
 
         return mejor
-
-
