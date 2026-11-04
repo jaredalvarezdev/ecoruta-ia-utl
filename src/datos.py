@@ -1,11 +1,14 @@
 """
 Módulo: datos.py
 Proyecto: EcoRuta IA - UTL
+
+Define los estados, las conexiones y los costos (en metros) del campus,
+y crea el problema de búsqueda del caso EcoCampus.
 """
 
 from modelo import Accion, Estado, Problema
 
-# Definicion de acciones
+# Definición de acciones
 accN = Accion('norte')
 accS = Accion('sur')
 accE = Accion('este')
@@ -15,7 +18,7 @@ accNO = Accion('noroeste')
 accSE = Accion('sureste')
 accSO = Accion('suroeste')
 
-# Deficion de los estados
+# Definición de los estados
 estacionamiento_norte = Estado('Estacionamiento Norte', [accNE, accSE]) # inicia
 edificio_b_pesado = Estado('Edificio B Pesado', [accSO, accE])
 edificio_b = Estado('Edificio B', [accO, accE, accS])
@@ -41,7 +44,7 @@ viajes = {
     'Contenedor PET': {'noroeste': cafeteria}
 }
 
-# 4. Distancias en costos de metros entre estados
+# Distancia en metros entre estados
 metros = {
     'Estacionamiento Norte': {'noreste': 66, 'sureste': 100},
     'Edificio B Pesado': {'suroeste': 66, 'este': 93},
@@ -54,17 +57,18 @@ metros = {
     'Cafetería': {'noroeste': 133, 'noreste': 71, 'suroeste': 190, 'sur': 200, 'sureste': 15},
     'Contenedor PET': {'noroeste': 15}
 }
-# Diccionario con numeros (para el menu)
+
+# Diccionario con números (para el menú)
 ubicaciones = {
     1: estacionamiento_norte,
     2: edificio_b_pesado,
     3: edificio_b,
     4: edificio_c,
-    5: edificio_d,
-    6: canchas_futbol,
-    7: edificio_a,
-    8: cafeteria,
-    9: edificio_a_pesado,
+    5: edificio_a,
+    6: edificio_a_pesado,
+    7: canchas_futbol,
+    8: edificio_d,
+    9: cafeteria,
     10: contenedor_PET
 }
 
