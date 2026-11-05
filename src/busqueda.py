@@ -5,7 +5,7 @@ Busqueda UCS para EcoRuta IA (EcoCampus)
 
 from heapq import heappush, heappop
 from itertools import count
-from modelo import Accion, Estado, Problema, Nodo
+from modelo import Nodo
 
 def buscar_ucs(problema):
     """Implementación de Uniform Cost Search (UCS)."""
